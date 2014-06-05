@@ -5,26 +5,30 @@ Projet C/C++ avec les librairies SDL, SDL_image, SDL_TTF (a venir pour le son)
 " Histoire et contexte "
 
 Centipede
-  Animation : Tête et corps
+  Animation : Tête + corps => 2 à 4 frames
   Design : Robot ou alien
 Taupe 
   Animation : 3 / 4 frames
   Design : Robot genre Wall-E et/ou R2D2
 Araignée  
-  Animations : environ 8 frames.
-  Design : Drône, pieuvre matrix, ou vaisseau.
+  Animations : environ 8 frames
+  Design : Drône / pieuvre matrix / vaisseau
 Scorpion 
   Animation : 3/4 frames
-  Design : Robot ou vaisseau radioactif ou pollueur (à voir)
+  Design : Robot ou vaisseau radioactif/pollueur (à voir)
 Champignon
-  Animation : 4 frames
+  Animation : 3 frames de destruction / 1 d'invincibilité
   Design : Astéroïdes
 Paysan 
-  Animation : 1 frame de stand et 8 frames de deplacement. Animation de mort a définir. Animation de tir.
-  Design : Vaisseau (en cours stand).
+  Animation : 1 frame de stand / 8 frames de deplacement / 1 animation de mort a définir / 1 animation de tir
+  Design : Vaisseau (frame "stand" en cours)
 Tir 
-  Animation : 1 frame de déplacement. 1 animation de collision.
-  Design : blaster star war.
+  Animation : 1 frame de déplacement / 1 animation de collision
+  Design : Tir Blaster (type star war)
 Background 
-  Animation : image fixe
-  Design : Univers star wars
+  Animation : Image fixe
+  Design : Fond spatial, étoilé (type star wars)
+ Menu 
+  Animation : Scroling / déplacement du vaiseau + tir (type didactiel, histoire de tester les contrôles avant la partie )
+  Design : Fond spatial / Réutilisation des sprites vaisseau, tir
+  Contenu : Jouer "nouvelle partie" / score / crédits / options (?)
