@@ -68,22 +68,33 @@ int clear() {
 int draw(SDL_Texture **texture, void *frame, void *position) { 
   if(frame == NULL) { 
     if(position == NULL) {
-      SDL_RenderCopy(rendu, *texture, NULL, NULL);
+      if(SDL_RenderCopy(rendu, *texture, NULL, NULL)) {
+        return -1;
+      }
+      return 0;
     }
     else {
       SDL_Rect *rect_dst = (SDL_Rect*)position;
-      SDL_RenderCopy(rendu, *texture, NULL, rect_dst);
+      if(SDL_RenderCopy(rendu, *texture, NULL, rect_dst)) {
+        return -1;
+      }
     }
   }
   else {
     if(frame == NULL) {
       SDL_Rect *rect_src = (SDL_Rect*)frame;
-      SDL_RenderCopy(rendu, *texture, rect_src, NULL);
+      if(SDL_RenderCopy(rendu, *texture, rect_src, NULL)) {
+        return -1;
+      }
+      return 0;
     }
     else {
       SDL_Rect *rect_src = (SDL_Rect*)frame;
       SDL_Rect *rect_dst = (SDL_Rect*)position;
-      SDL_RenderCopy(rendu, *texture, rect_src, rect_dst);    
+      if(SDL_RenderCopy(rendu, *texture, rect_src, rect_dst)) {
+        return -1;
+      }
+      return 0;  
     }
   }
   return 0;
