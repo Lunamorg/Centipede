@@ -2,40 +2,43 @@ Developpeur : Lunamorg (alias Fredo) et Kailas (alias Arthur)
 
 Module : game_engine
 Description
-	Le moteur de jeu est destiné a être réutilisé et donc est constitué de fonction générique
+	Le moteur de jeu est destiné a être réutilisé et donc est constitué de fonctions génériques
 	
 Fonction
 	Prototype : extern int load_engine(char* title, int width, int height)
-	Recoit : le titre de la fenetre et ses dimensions largeur et hauteur
-	Renvoi : une valeur non nulle si une des bibliothèques n'a pu etre chargé ou bien si la fenetre ou la rendu na pu être creer
-	Initialise la SDL, TTF, SDL_image et creer une fenetre et un rendu associé
+	Reçoit : le titre de la fenetre et ses dimensions largeur et hauteur
+	Renvoi : une valeur non nulle en cas d'erreur
+	Fonction : Initialise les bibliothèques, créer une fenetre et un rendu associé à la fenêtre
 	
 	Prototype : extern void unload_engine()
 	Transmet : char* error_engine = SDL_GetError()
-	Détruit le rendu, la fenetre et quitte les bibliothèques
+	Fonction : Détruit le rendu, la fenetre et quitte les bibliothèques
 	
 	Prototype : SDL_Texture* load_image(char* filename)
-	Recoit : le nom d'une image au format PNG
+	Reçoit : le nom d'une image au format PNG
 	Renvoi : l'adresse de la texture contenant l'image
+	Fonction : Charger des images PNG
 	
 	Prototype : SDL_Texture* load_texte(char *texte, char* police, size_t size, Uint8 r, Uint8 g, Uint8 b)
-	Recoit : le texte, la police, la taille du texte en px, et les differentes composante de couleur RGB
+	Reçoit : le texte, la police, la taille du texte en px, et les differentes composantes de couleur RGB
 	Renvoi : l'adresse de la texture contenant le texte
+	Fonction : Ecrire du texte à l'écran
 	
 	Prototype : extern int clear()
-	Renvoi : une valeur non nulle en cas d'erreur
-	Efface l'ecran
+	Renvoi : une valeur non nulle en cas d'erreurs
+	Fonction : Efface l'écran
 	
 	Prototype : extern int draw(SDL_Texture **texture, void* position, void *frame)
-	Recoit : l'adresse de la texture a afficher, 2 SDL_Rect (la position et la frame)
+	Reçoit : l'adresse de la texture a afficher, 2 SDL_Rect (la position et la frame)
 	Renvoi : Une valeur non nulle en cas d'erreur
 	
 	Prototype : extern void drawToScreen()
-	Raffraichit l'ecran
+	Fonction : Raffraîchit l'écran
 	
 	Prototype : extern SDL_bool key(Uint8* state, int* key)
-	Recoit : un pointeur de type Uint8 qui contiendra l'etat du clavier, et un pointeur de type int qui contiendra la touche
+	Reçoit : un pointeur de type Uint8 qui contiendra l'état du clavier, et un pointeur de type int qui contiendra la touche
 	Renvoi : SDL_FALSE si la touche SDLK_ESCAPE est pressé
+	Fonction : Gestion des évenements clavier
 	
 Graphiste : Pinkbarbelle (alias Maxime)
 
