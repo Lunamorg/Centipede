@@ -81,7 +81,7 @@ int draw(SDL_Texture **texture, void *frame, void *position) {
     }
   }
   else {
-    if(frame == NULL) {
+    if(position == NULL) {
       SDL_Rect *rect_src = (SDL_Rect*)frame;
       if(SDL_RenderCopy(rendu, *texture, rect_src, NULL)) {
         return -1;
