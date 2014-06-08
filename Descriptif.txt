@@ -1,6 +1,43 @@
-Centipede
-=========
-Projet C/C++ avec les librairies SDL, SDL_image, SDL_TTF (a venir pour le son)
+Developpeur : Lunamorg (alias Fredo) et Kailas (alias Arthur)
+
+Module : game_engine
+Description
+	Le moteur de jeu est destiné a être réutilisé et donc est constitué de fonction générique
+	
+Fonction
+	Prototype : extern int load_engine(char* title, int width, int height)
+	Recoit : le titre de la fenetre et ses dimensions largeur et hauteur
+	Renvoi : une valeur non nulle si une des bibliothèques n'a pu etre chargé ou bien si la fenetre ou la rendu na pu être creer
+	Initialise la SDL, TTF, SDL_image et creer une fenetre et un rendu associé
+	
+	Prototype : extern void unload_engine()
+	Transmet : char* error_engine = SDL_GetError()
+	Détruit le rendu, la fenetre et quitte les bibliothèques
+	
+	Prototype : SDL_Texture* load_image(char* filename)
+	Recoit : le nom d'une image au format PNG
+	Renvoi : l'adresse de la texture contenant l'image
+	
+	Prototype : SDL_Texture* load_texte(char *texte, char* police, size_t size, Uint8 r, Uint8 g, Uint8 b)
+	Recoit : le texte, la police, la taille du texte en px, et les differentes composante de couleur RGB
+	Renvoi : l'adresse de la texture contenant le texte
+	
+	Prototype : extern int clear()
+	Renvoi : une valeur non nulle en cas d'erreur
+	Efface l'ecran
+	
+	Prototype : extern int draw(SDL_Texture **texture, void* position, void *frame)
+	Recoit : l'adresse de la texture a afficher, 2 SDL_Rect (la position et la frame)
+	Renvoi : Une valeur non nulle en cas d'erreur
+	
+	Prototype : extern void drawToScreen()
+	Raffraichit l'ecran
+	
+	Prototype : extern SDL_bool key(Uint8* state, int* key)
+	Recoit : un pointeur de type Uint8 qui contiendra l'etat du clavier, et un pointeur de type int qui contiendra la touche
+	Renvoi : SDL_FALSE si la touche SDLK_ESCAPE est pressé
+	
+Graphiste : Pinkbarbelle (alias Maxime)
 
 " Histoire et contexte "
 
@@ -32,3 +69,5 @@ Background
   Animation : Scroling / déplacement du vaiseau + tir (type didactiel, histoire de tester les contrôles avant la partie )
   Design : Fond spatial / Réutilisation des sprites vaisseau, tir
   Contenu : Jouer "nouvelle partie" / score / crédits / options (?)
+  
+  
