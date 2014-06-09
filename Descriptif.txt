@@ -45,7 +45,7 @@ Graphiste : Pinkbarbelle (alias Maxime)
 " Histoire et contexte "
 
 Centipede
-  Animation : Tête + corps => 2 à 4 frames
+  Animation : Tête + corps => 2 à 4 frames (sprite corps en cours, tête à suivre)
   Design : Robot ou alien
 Taupe 
   Animation : 3 / 4 frames
@@ -60,7 +60,7 @@ Champignon
   Animation : 3 frames de destruction / 1 d'invincibilité
   Design : Astéroïdes
 Paysan 
-  Animation : 1 frame de stand (coloration base => ok)/ 8 frames de deplacement / 1 animation de mort a définir / 1 animation de tir
+  Animation : 1 frame de stand (sprite de base => ok)/ 8 frames de deplacement / 1 animation de mort a définir / 1 animation de tir
   Design : Vaisseau
 Tir 
   Animation : 1 frame de déplacement / 1 animation de collision
