@@ -1,5 +1,5 @@
 ##########################################################
-#	MAKEFILE POUR SFML SOUS MINGW						 #
+#	MAKEFILE POUR LES LISTES							 #
 #	MODE DEBUG UNIQUEMENT								 #
 #	CREE PAR KAILASDEV									 #
 ##########################################################
