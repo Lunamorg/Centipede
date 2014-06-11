@@ -203,3 +203,13 @@ int delete_tiles() {
   // Pour le moment //
   return 0;
 }
+
+int newRect(SDL_Rect* rect, int x, int y, int w, int h){
+	if(x < 0 || y < 0 || w <= 0 || y <= 0)
+		return -1;
+	rect->x = x;
+	rect->y = y;
+	rect->w = w;
+	rect->h = h;
+	return 0;
+}

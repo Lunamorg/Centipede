@@ -39,5 +39,8 @@ extern void deplacement();
 extern SDL_bool keyboard();
 extern void anim();
 extern void move_snake();
+//Remplit le SDL_Rect* passé en parametre 
+//Retourne -1 si la taille n'est pas valide ou/et les positions ne sont pas valides, Sinon retourne 0
+extern int newRect(SDL_Rect* rect, int x, int y, int w, int h);
 
 #endif
